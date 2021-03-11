@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/', function (req, res) {
+app.get('/webhook', function (req, res) {
   const PAGE_VERIFY_TOKEN = "asdfghjkl;'";
 
   let token = req.query['hub.verify_token'];
