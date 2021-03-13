@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/setup', function (req, res) {
-  var date = {
+  var data = {
     "greeting": [
       {
         "locale": "default",
