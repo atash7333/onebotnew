@@ -39,7 +39,7 @@ app.get('/setup', function (req, res) {
       console.log(body);
     }
   )
-  res.send("done");
+  res.send("doneeeeeee");
 });
 
 
