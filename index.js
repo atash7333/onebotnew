@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const request = require('request');
 
 const app = express();
-const PAGE_ACCESS_TOKEN = "EAAD5iuN9k9UBAEOXH6Sp3VCZAmv2FjCKZAnuZAd0VBpeIZBqoxbZCDdl6xKqApOo4GP05jAP8So8nHlDk6YZC5PgDZCOZAZATbZCGXPHkgCNr1XGA5el1XvxSdbTs9QECNORDjloDZA58a3EYEI04YOgxQ7SM7lVLtlDwvuJJRigafBkyZCdWqdmFqgcIJZBQlNEuyFUZD"
+const PAGE_ACCESS_TOKEN = "EAAD5iuN9k9UBAPgLy2n6v6eqd7epJPBoPUqSzyLzTm71pdigksjhNsedSoUS7bvE77T4iSqGNar6OBHsc6U78coDb8vKZCpFW4bDMqp9j03MrEXqHVzDTt8EVERXT9V2IRKrxclK6ZB5myaYdfZA6EFq527iiidXktIkc53CdxVhCLA5nipUOkC8ZBWoylcZD"
 
 
 app.set("port", (process.env.PORT || 8000));
