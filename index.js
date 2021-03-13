@@ -29,7 +29,7 @@ app.get('/setup', function (req, res) {
   };
   request(
     {
-      url: "https://graph.facebook.com/v2.6/me/messages?access_token=" + PAGE_ACCESS_TOKEN,
+      url: "https://graph.facebook.com/v10.0/me/messages_profile?access_token=" + PAGE_ACCESS_TOKEN,
       method: "POST",
       Headers: { "Content-Type": "application/json" },
       form: data
