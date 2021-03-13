@@ -19,15 +19,17 @@ app.get('/', function (req, res) {
 });
 
 app.get('/setup', function (req, res) {
+  setupGreetingText();
+  getStarted();
+  res.send("doneeeeeee11");
+});
+function getStarted() {
   var data = {
-    "greeting": [
-      {
-        "locale": "default",
-        "text": "Hello!"
-      }
-    ]
+    "get_started": {
+      "payload": "GET_STARTED_PAYLOAD"
+    }
   };
- 
+
   request(
     {
       url: "https://graph.facebook.com/v7.0/me/messages_profile?access_token=" + PAGE_ACCESS_TOKEN,
@@ -40,10 +42,30 @@ app.get('/setup', function (req, res) {
       console.log(body);
     }
   )
-  res.send("doneeeeeee");
-});
+}
+function setupGreetingText() {
+  var data = {
+    "greeting": [
+      {
+        "locale": "default",
+        "text": "Hello {{user_first_name}}! adddddd"
+      }
+    ]
+  };
 
-
+  request(
+    {
+      url: "https://graph.facebook.com/v7.0/me/messages_profile?access_token=" + PAGE_ACCESS_TOKEN,
+      method: "POST",
+      Headers: { "Content-Type": "application/json" },
+      form: data
+    },
+    function (error, response, body) {
+      console.log(response);
+      console.log(body);
+    }
+  )
+}
 
 app.get('/webhook', function (req, res) {
   const PAGE_VERIFY_TOKEN = "asdfghjkl;'";
